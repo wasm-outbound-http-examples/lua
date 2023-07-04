@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP request for Lua</title>
+    <script type="text/javascript" defer src="dist/main.js"></script>
+</head>
+<body>
+<h2>HTTP Request from inside WASM implemented in Lua</h2>
+
+<p>This example uses binary build of <a href="https://github.com/ceifa/wasmoon">Wasmoon</a>.</p>
+<p>See the output in browser developer console.</p>
+
+<p>Actual code:</p>
+<pre>
+
+local resp = fetch('https://httpbin.org/anything'):await()
+local text = resp:text():await()
+print(text)
+
+</pre>
+<footer><small>Created for (wannabe-awesome) <a href="https://github.com/vasilev/HTTP-request-from-inside-WASM">list</a></small></footer>
+</body>
+</html>
